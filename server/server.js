@@ -1,5 +1,5 @@
 const express = require("express");
-const { User, Thread } = require("../persist/model");
+const { User } = require("../persist/model");
 const setUpAuth = require("./auth");
 const setUpSession = require("./session");
 const app = express();
@@ -12,3 +12,5 @@ app.use(express.static(`${__dirname}/../public/`));
 
 setUpSession(app);
 // setUpAuth(app);
+
+module.exports = app;
